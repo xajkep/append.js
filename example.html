@@ -1,0 +1,155 @@
+<html>
+
+<head>
+    <title>{{ .title }}</title>
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:title" content="{{ .title }}" />
+    <meta property="og:description" content="{{ .description }}" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+
+    <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./append.js"></script>
+
+    <style>
+        .template {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mx-auto mt-5 flex flex-col space-y-4 container">
+        <div class="box flex flex-row space-x-4" id="numberBox">
+            <div class="template">
+                <a data-id="%id%" href="#%id%" class="bg-indigo-200 py-1 px-2 rounded-full hover:bg-indigo-300">
+                    <span class="font-semibold">%number%</span> <span>%word%</span>
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+        <select id="selectBox" class="w-64">
+            <option class="template" value="%id%" disabled><span>%name%</span></option>
+        </select>
+
+        <hr>
+
+        <table class="text-left w-1/2 shadow-xl">
+            <thead class="bg-indigo-600 text-white">
+                <th>ID</th>
+                <th>ANIMAL</th>
+                <th>NUMBER</th>
+            </thead>
+            <tbody id="tbodyBox" class="bg-indigo-200">
+                <tr class="template hover:bg-indigo-300">
+                    <td>%id%</td>
+                    <td>%word%</td>
+                    <td>%number%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <div id="embededBox" class="flex flex-col space-y-4 w-1/5">
+            <div class="template">
+                <div class="shadow-xl bg-gray-200 m-2 p-2 rounded-md">
+                    <span class="font-bold">%name%</span>
+                    <div class="tags flex flex-row space-x-2 mt-2">
+                        <a class="template bg-indigo-200 py-1 px-2 rounded-full hover:bg-indigo-300" data-id="%tags.id%"
+                            href="#%tags.id%">
+                            %tags.name%
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var data = [
+            {
+                "number": 7,
+                "word": "dog",
+                "id": 1
+            },
+            {
+                "number": 1,
+                "word": "cat",
+                "id": 2
+            },
+            {
+                "number": 3,
+                "word": "fox",
+                "id": 0
+            },
+            {
+                "number": 784,
+                "word": "mouse",
+                "id": 3
+            }
+        ];
+
+        var data2 = [
+            {
+                "name": "Rex",
+                "id": 0
+            },
+            {
+                "name": "Garfield",
+                "id": 1
+            },
+            {
+                "name": "Mickey",
+                "id": 2
+            },
+        ];
+
+        var data3 = [
+            {
+                "name": "Rex",
+                "tags": [
+                    {
+                        "name": "brown",
+                        "id": 0
+                    },
+                    {
+                        "name": "dog",
+                        "id": 1
+                    }
+                ]
+            },
+            {
+                "name": "Snoopy",
+                "tags": [
+                    {
+                        "name": "white",
+                        "id": 2
+                    },
+                    {
+                        "name": "dog",
+                        "id": 1
+                    },
+                    {
+                        "name": "male",
+                        "id": 3
+                    }
+                ]
+            }
+        ]
+
+        append("#numberBox", data);
+        append("#selectBox", data2);
+        append(u("#tbodyBox"), data);
+        append("#embededBox", data3);
+    </script>
+
+</body>
+
+</html>
