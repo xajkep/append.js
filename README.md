@@ -13,7 +13,7 @@ Then use `%variableName%` where you want to inject your variables.
 
 ## Examples
 
-~~~
+~~~html
 <style>
     .template {
         display: none;
@@ -36,7 +36,7 @@ Then use `%variableName%` where you want to inject your variables.
 </script>
 ~~~
 
-~~~
+~~~html
 <div id="box">
     <div class="template">
         <a href="/get/%id%">
