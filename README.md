@@ -21,9 +21,11 @@ Then use `%variableName%` where you want to inject your variables.
 </style>
 
 <div id="box">
-    <a class="template" href="/get/%id%">
-        %name%
-    </a>
+    <div class="template">
+        <a href="/get/%id%">
+            %name%
+        </a>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
