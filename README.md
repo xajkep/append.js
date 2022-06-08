@@ -1,13 +1,13 @@
 
 # append.js
 
-**append.js** provides a simple function *append()* to help you in common HTML clone / append operations.
+**append.js** provides a simple function `append()` to help you in common HTML clone / append operations.
 
 ## Usage
 
-Add an *id* to your box that will contain your elements and the class *template* to the element that will be cloned.
+Add an `id` to your box that will contain your elements and the class `template` to the element that will be cloned.
 
-Then use *%variableName%* where you want to inject your variables.
+Then use `%variableName%` where you want to inject your variables.
 
 (Support embeded data)
 
