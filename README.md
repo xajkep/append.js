@@ -36,4 +36,24 @@ Then use `%variableName%` where you want to inject your variables.
 </script>
 ~~~
 
+~~~
+<div id="box">
+    <div class="template">
+        <a href="/get/%id%">
+            %name%
+        </a>
+    </div>
+    <div class="">
+        <a href="/get/0">
+            Bob
+        </a>
+    </div>
+    <div class="">
+        <a href="/get/1">
+            John
+        </a>
+    </div>
+</div>
+~~~~
+
 [More examples](example.html)
