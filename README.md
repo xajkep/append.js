@@ -43,12 +43,12 @@ Then use `%variableName%` where you want to inject your variables.
             %name%
         </a>
     </div>
-    <div class="">
+    <div class="active">
         <a href="/get/0">
             Bob
         </a>
     </div>
-    <div class="">
+    <div class="active">
         <a href="/get/1">
             John
         </a>
