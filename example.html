@@ -36,12 +36,14 @@
                 <th>ID</th>
                 <th>ANIMAL</th>
                 <th>NUMBER</th>
+                <th>ACTION</th>
             </thead>
             <tbody id="tbodyBox" class="bg-indigo-200">
                 <tr class="template hover:bg-indigo-300">
                     <td>%id%</td>
                     <td>%word%</td>
                     <td>%number%</td>
+                    <td><button class="close">remove</button></td>
                 </tr>
             </tbody>
         </table>
@@ -139,6 +141,9 @@
         append("#selectBox", data2);
         append(u("#tbodyBox"), data);
         append("#embededBox", data3);
+
+        reset("#numberBox");
+        append("#numberBox", data);
     </script>
 
 </body>

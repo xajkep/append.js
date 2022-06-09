@@ -40,6 +40,7 @@ function append(id, data, suffix="") {
         data.forEach(function (element) {
             var entry = template.clone();
             entry.removeClass("template");
+            entry.addClass("active");
             entry.attr("disabled", false);
             fill(element, entry, suffix);
             box.append(entry);
@@ -48,4 +49,13 @@ function append(id, data, suffix="") {
         console.error("argument 'data' isn't an Array");
         return;
     }
+
+    u(".active .close").on("click", function() {
+        u(this).closest(".active").remove();
+    })
+}
+
+function reset(id) {
+    var box = u(id);
+    box.find('.active').remove();
 }
