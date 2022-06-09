@@ -13,7 +13,7 @@ Then use `%variableName%` where you want to inject your variables.
 
 ## Examples
 
-~~~
+~~~html
 <style>
     .template {
         display: none;
@@ -35,5 +35,25 @@ Then use `%variableName%` where you want to inject your variables.
     append("#box", data);
 </script>
 ~~~
+
+~~~html
+<div id="box">
+    <div class="template">
+        <a href="/get/%id%">
+            %name%
+        </a>
+    </div>
+    <div class="">
+        <a href="/get/0">
+            Bob
+        </a>
+    </div>
+    <div class="">
+        <a href="/get/1">
+            John
+        </a>
+    </div>
+</div>
+~~~~
 
 [More examples](example.html)
