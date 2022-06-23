@@ -12,6 +12,10 @@ function fill(element, entry, suffix="") {
                 target = "%"+suffix+"."+key+"%";
             }
             entry.html(entry.html().replaceAll(target, value));
+
+            if (entry.attr("value") !== null) {
+                entry.attr("value", entry.attr("value").replace(target, value));
+            }
         }
     });
 }
